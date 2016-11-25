@@ -33,12 +33,6 @@ nav {
   display: block;
 }
 
-a,
-[tabindex] {
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-}
-
 img {
   border: 0;
 }
@@ -59,6 +53,14 @@ svg:not(:root) {
 svg.img-flex {
   width: 100%;
   height: 100%;
+}
+
+.image-replacement, .ir {
+  overflow: hidden;
+  direction: ltr;
+  text-align: left;
+  text-indent: 100%;
+  white-space: nowrap;
 }
 
 .list-group, .list-group-inline, .list-group--inline {
@@ -285,6 +287,11 @@ ol > li::before {
   content: none;
 }
 
+.link-box {
+  display: block;
+  text-decoration: none;
+}
+
 /* stylelint-disable no-descending-specificity */
 
 /*
@@ -293,11 +300,3 @@ ol > li::before {
  */
 
 /* End Normalize.css code */
-
-a:hover, a:active {
-  outline: none;
-}
-
-a:focus, [tabindex="0"]:focus {
-  outline-offset: 3px;
-}
